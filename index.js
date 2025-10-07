@@ -175,7 +175,7 @@ app.use("/home", requireAuthenticationMiddleware, async (req, res) => {
     `);
 });
 
-const port = 10000;
+const port = process.env.PORT || 10000;
 app.listen(port, "0.0.0.0", () => {
   console.log(`Running on port ${port}`);
 });
